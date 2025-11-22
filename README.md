@@ -95,3 +95,18 @@ See the "Project Structure" section below for full details.
 ```bash
 git clone https://github.com/your-user/price-tracker.git
 cd price-tracker
+```
+
+### Start the development environment
+
+Run using Aspire:
+```bash
+dotnet run --project src/PriceTracker.AppHost
+```
+
+
+Front-end development server (SSR optional):
+
+```bash
+cd frontend npm install npm start
+```
