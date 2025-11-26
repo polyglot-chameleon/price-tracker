@@ -1,9 +1,13 @@
-<main class="main bg-amber-500 border-radius rounded-full ml-36 mr-36 mt-36 p-10">
-  The Price Tracker is a distributed application designed to monitor prices of citems such as GPUs,
-  CPUs, SSDs and other products. It aggregates data from multiple online stores, keeps historical
-  price records, calculates trends, and exposes the information through a modern Angular frontend.
-  The system supports real-time updates via Server-Sent Events (SSE) and can be configured to track
-  any number of components and sources.
+<main>
+  <article class="main bg-amber-500 border-radius rounded-full ml-36 mr-36 mt-36 p-10">
+    The Price Tracker is a distributed application designed to monitor prices of citems such as
+    GPUs, CPUs, SSDs and other products. It aggregates data from multiple online stores, keeps
+    historical price records, calculates trends, and exposes the information through a modern
+    Angular frontend. The system supports real-time updates via Server-Sent Events (SSE) and can be
+    configured to track any number of components and sources.
+  </article>
+
+  <app-chart></app-chart>
 </main>
 
 <router-outlet />
