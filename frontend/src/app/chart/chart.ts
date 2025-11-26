@@ -1,4 +1,5 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, OnInit, AfterViewInit, PLATFORM_ID, Inject } from '@angular/core';
 import * as echarts from 'echarts';
 
 @Component({
@@ -8,10 +9,12 @@ import * as echarts from 'echarts';
 export class ChartComponent implements OnInit, AfterViewInit {
   chartInstance: any;
 
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    this.initChart();
+    isPlatformBrowser(this.platformId) && this.initChart();
   }
 
   initChart(): void {
